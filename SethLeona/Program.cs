@@ -46,7 +46,7 @@ namespace Leona
             _spells.Add(_e);
             _spells.Add(_r);
 
-            _root = new Menu("Leona", "Leona", true);
+            _root = new Menu("SethLeona", "Leona", true);
             _root.AddSubMenu(new Menu("Orbwalking", "Orbwalking"));
 
             Orbwalker = new Orbwalking.Orbwalker(_root.SubMenu("Orbwalking"));
