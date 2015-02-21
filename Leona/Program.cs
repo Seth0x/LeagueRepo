@@ -33,7 +33,9 @@ namespace Leona
         {
             if (ObjectManager.Player.BaseSkinName == "Leona")
                 return;
-
+            
+            Game.PrintChat("Debug Log");
+            
             #region Spells
             _q = new Spell(SpellSlot.Q, 120f);
             _w = new Spell(SpellSlot.W, 450f);
