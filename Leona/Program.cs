@@ -31,7 +31,10 @@ namespace Leona
 
         private static void Game_OutLoading(EventArgs args)
         {
-            if (ObjectManager.Player.BaseSkinName == "Leona")
+            Game.PrintChat("Debug Log 1 ");
+            Console.WriteLine("Debug Log 1 ");
+            
+            if (ObjectManager.Player.ChampionName != "Leona")
                 return;
             
             Game.PrintChat("Debug Log");
