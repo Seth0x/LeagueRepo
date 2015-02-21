@@ -24,7 +24,7 @@ namespace Leona
         public static List<Spell> _spells = new List<Spell>();
 
         public static SpellSlot _exhaustSlot;
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             CustomEvents.Game.OnGameLoad += Game_OutLoading;
         }
