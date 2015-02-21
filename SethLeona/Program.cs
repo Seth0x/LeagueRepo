@@ -120,6 +120,12 @@ namespace Leona
 
             if (MenuInstance)
             {
+                if (ObjectManager.Player.Distance(sender) < _q.Range && _q.IsReady())
+                {
+                    _q.Cast();
+                    ObjectManager.Player.IssueOrder(GameObjectOrder.AttackUnit, sender);
+                }
+
                 if (ObjectManager.Player.Distance(sender) < _e.Range && _e.IsReady() && _q.IsReady())
                 {
                     if (EQInstance)
@@ -129,10 +135,13 @@ namespace Leona
                         ObjectManager.Player.IssueOrder(GameObjectOrder.AttackUnit, sender);
                     }
                 }
-                else if (ObjectManager.Player.Distance(sender) < _r.Range && _r.IsReady())
+                else if (ObjectManager.Player.Distance(sender) > _e.Range)
                 {
                     if (RInstance)
-                        _r.CastIfHitchanceEquals(sender, HitChance.High, true);
+                    {
+                        if (ObjectManager.Player.Distance(sender) < _r.Range && _r.IsReady())
+                            _r.CastIfHitchanceEquals(sender, HitChance.High, true);
+                    }
                 }
             }
         }
