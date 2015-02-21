@@ -32,8 +32,6 @@ namespace Leona
 
         private static void Game_OutLoading(EventArgs args)
         {
-            try
-            {
             
             Game.PrintChat("Debug Log 1 ");
             Console.WriteLine("Debug Log 1 ");
@@ -59,16 +57,7 @@ namespace Leona
             _spells.Add(_w);
             _spells.Add(_e);
             _spells.Add(_r);
-            }
             
-            catch (ArgumentNullException e)
-            {
-            Console.WriteLine("{0} First exception caught.", e);
-            }
-        // Least specific:
-            catch (Exception e)
-            {
-            Console.WriteLine("{0} Second exception caught.", e);
             }
             
             #endregion
