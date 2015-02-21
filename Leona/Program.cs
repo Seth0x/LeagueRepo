@@ -35,6 +35,7 @@ namespace Leona
                 return;
             
             Game.PrintChat("Debug Log");
+            Console.WriteLine("Debug Log");
             
             #region Spells
             _q = new Spell(SpellSlot.Q, 120f);
