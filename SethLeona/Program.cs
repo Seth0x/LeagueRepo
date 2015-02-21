@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,11 +56,12 @@ namespace Leona
             _root.AddSubMenu(targetSelectorMenu);
 
             _root.AddSubMenu(new Menu("Spell Handler", "SpellsM"));
-            _root.SubMenu("Combo").AddItem(new MenuItem("Use Q", "UseQCombo").SetValue(true));
-            _root.SubMenu("Combo").AddItem(new MenuItem("Use W", "UseWCombo").SetValue(true));
-            _root.SubMenu("Combo").AddItem(new MenuItem("Use E", "UseECombo").SetValue(true));
-            _root.SubMenu("Combo").AddItem(new MenuItem("Use R", "UseRCombo").SetValue(true));
-            _root.SubMenu("Combo").AddItem(new MenuItem("Use Exhaust", "UseExhaustCombo").SetValue(true));
+            _root.SubMenu("SpellsM").AddItem(new MenuItem("Combo", "Combo"));
+            _root.SubMenu("Combo").AddItem(new MenuItem("UseQCombo", "Use Q").SetValue(true));
+            _root.SubMenu("Combo").AddItem(new MenuItem("UseWCombo", "Use W").SetValue(true));
+            _root.SubMenu("Combo").AddItem(new MenuItem("UseECombo", "Use E").SetValue(true));
+            _root.SubMenu("Combo").AddItem(new MenuItem("UseRCombo", "Use R").SetValue(true));
+            _root.SubMenu("Combo").AddItem(new MenuItem("UseExhaustCombo", "Use Exhaust").SetValue(true));
             _root.SubMenu("Combo")
                 .AddItem(
                     new MenuItem("ComboActive", "Combo!").SetValue(
@@ -73,7 +74,7 @@ namespace Leona
             _root.SubMenu("SharpDrawer").AddItem(new MenuItem("DrawR", "Draw R Range").SetValue(new Circle(true, System.Drawing.Color.FromArgb(100, 255, 0, 255))));
 
             _root.AddSubMenu(new Menu("Misc Manager", "Misc"));
-            _root.SubMenu("Misc").AddItem(new MenuItem("Interrupt Spells", "InterruptSpells").SetValue(true));
+            _root.SubMenu("Misc").AddItem(new MenuItem("InterruptSpells", "Interrupt Spells").SetValue(true));
             _root.SubMenu("InterruptSpells").AddItem(new MenuItem("EQInterrupt", "Use EQ on Target").SetValue(true));
             _root.SubMenu("InterruptSpells").AddItem(new MenuItem("RInterrupt", "Use R on Target").SetValue(true));
             _root.SubMenu("Misc").AddItem(new MenuItem("QUsage", "Auto-Q on GapClosers").SetValue(true));
