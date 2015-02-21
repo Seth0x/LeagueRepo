@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E9532D4-B366-442D-90D8-2DBA9563F894}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Exe</OutputType> 
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SethLeona</RootNamespace>
     <AssemblyName>SethLeona</AssemblyName>
