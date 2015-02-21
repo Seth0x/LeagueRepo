@@ -15,15 +15,16 @@ using LeagueSharp;
 
 namespace Leona
 {
-    class Program
+    internal class Program
     {
         public static Menu _root;
         public static Spell _q, _w, _e, _r;
-        public static Orbwalking.Orbwalker _orbwalker;
+        public static Orbwalking.Orbwalker Orbwalker;
 
         public static List<Spell> _spells = new List<Spell>();
 
         public static SpellSlot _exhaustSlot;
+        
         private static void Main(string[] args)
         {
             CustomEvents.Game.OnGameLoad += Game_OutLoading;
@@ -61,6 +62,7 @@ namespace Leona
             #region Root
             _root = new Menu("Leona", "Leona", true);
             _root.AddSubMenu(new Menu("Orbwalking", "Orbwalking"));
+            Orbwalker = new Orbwalking.Orbwalker(Config.SubMenu("Orbwalking"));
 
             var targetSelectorMenu = new Menu("Target Selector", "Target Selector");
             TargetSelector.AddToMenu(targetSelectorMenu);
