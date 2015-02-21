@@ -126,6 +126,7 @@ namespace Leona
                     {
                         _q.Cast();
                         _e.CastIfHitchanceEquals(sender, HitChance.High, true);
+                        ObjectManager.Player.IssueOrder(GameObjectOrder.AttackUnit, sender);
                     }
                 }
                 else if (ObjectManager.Player.Distance(sender) < _r.Range && _r.IsReady())
