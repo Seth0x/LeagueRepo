@@ -95,9 +95,9 @@ namespace Leona
             if (_root.Item("DrawW").GetValue<Circle>().Active)
             { Render.Circle.DrawCircle(ObjectManager.Player.Position, _w.Range, _root.Item("DrawW").GetValue<Circle>().Color); }
             if (_root.Item("DrawE").GetValue<Circle>().Active)
-            { Render.Circle.DrawCircle(ObjectManager.Player.Position, _w.Range, _root.Item("DrawE").GetValue<Circle>().Color); }
+            { Render.Circle.DrawCircle(ObjectManager.Player.Position, _e.Range, _root.Item("DrawE").GetValue<Circle>().Color); }
             if (_root.Item("DrawR").GetValue<Circle>().Active)
-            { Render.Circle.DrawCircle(ObjectManager.Player.Position, _w.Range, _root.Item("DrawR").GetValue<Circle>().Color); }
+            { Render.Circle.DrawCircle(ObjectManager.Player.Position, _r.Range, _root.Item("DrawR").GetValue<Circle>().Color); }
         }
 
         private static void OnEnemyGapcloser(ActiveGapcloser gapcloser)
