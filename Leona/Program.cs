@@ -29,7 +29,7 @@ namespace Leona
             CustomEvents.Game.OnGameLoad += Game_OutLoading;
         }
 
-        static void Game_OutLoading(EventArgs args)
+        private static void Game_OutLoading(EventArgs args)
         {
             if (ObjectManager.Player.BaseSkinName == "Leona")
                 return;
@@ -115,7 +115,7 @@ namespace Leona
             }
         }
 
-        static void Interrupter2_OnInterruptableTarget(Obj_AI_Hero sender, Interrupter2.InterruptableTargetEventArgs args)
+        private static void Interrupter2_OnInterruptableTarget(Obj_AI_Hero sender, Interrupter2.InterruptableTargetEventArgs args)
         {
             var MenuInstance = _root.Item("InterruptSpells").GetValue<bool>();
             var EQInstance = _root.Item("EQInterrupt").GetValue<bool>();
