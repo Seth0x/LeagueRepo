@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+	<Reference Include="SharpDX.Direct3D9">
+      <HintPath>C:\Program Files\LeagueSharp\\System\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
     <Reference Include="LeagueSharp">
       <HintPath>C:\Program Files\LeagueSharp\\System\LeagueSharp.dll</HintPath>
     </Reference>
