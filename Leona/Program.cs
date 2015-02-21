@@ -31,7 +31,7 @@ namespace Leona
 
         static void Game_OutLoading(EventArgs args)
         {
-            if (ObjectManager.Player.ChampionName != "Leona")
+            if (ObjectManager.Player.BaseSkinName == "Leona")
                 return;
 
             #region Spells
