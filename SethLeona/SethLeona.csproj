@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D7FC0B0F-8D16-4CDE-987A-8B4C72E6343D}</ProjectGuid>
+    <ProjectGuid>{0E9532D4-B366-442D-90D8-2DBA9563F894}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Leona</RootNamespace>
-    <AssemblyName>Leona</AssemblyName>
+    <RootNamespace>SethLeona</RootNamespace>
+    <AssemblyName>SethLeona</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PreBuildEvent />
     <PostBuildEvent />
+    <OutputPath>bin\Release</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -34,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-	<Reference Include="SharpDX.Direct3D9">
-      <HintPath>C:\Program Files\LeagueSharp\\System\SharpDX.Direct3D9.dll</HintPath>
-    </Reference>
     <Reference Include="LeagueSharp">
       <HintPath>C:\Program Files\LeagueSharp\\System\LeagueSharp.dll</HintPath>
     </Reference>
@@ -46,6 +44,12 @@
     <Reference Include="SharpDX">
       <HintPath>C:\Program Files\LeagueSharp\\System\SharpDX.dll</HintPath>
     </Reference>
+    <Reference Include="SharpDX.Direct3D9">
+      <HintPath>C:\Program Files\LeagueSharp\\System\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Toolkit.Graphics">
+      <HintPath>C:\Program Files\LeagueSharp\\System\SharpDX.Toolkit.Graphics.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -54,6 +58,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="xSLx-Orbwalker">
+      <HintPath>C:\Program Files\LeagueSharp\\System\xSLx-Orbwalker.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
