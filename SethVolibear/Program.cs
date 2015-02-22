@@ -99,7 +99,14 @@ namespace Volibear
             Interrupter2.OnInterruptableTarget += Interrupter2_OnInterruptableTarget;
             AntiGapcloser.OnEnemyGapcloser -= OnEnemyGapcloser;
         }
-
+        
+        private static void Drawing_OnDraw(EventArgs args)
+        {
+            if (_root.Item("DrawW").GetValue<Circle>().Active)
+            { Render.Circle.DrawCircle(ObjectManager.Player.Position, _w.Range, _root.Item("DrawW").GetValue<Circle>().Color); }
+            if (_root.Item("DrawE").GetValue<Circle>().Active)
+            { Render.Circle.DrawCircle(ObjectManager.Player.Position, _e.Range, _root.Item("DrawE").GetValue<Circle>().Color); }
+        }
         private static float GetComboDamage(Obj_AI_Base hero)
         {
             var fComboDamage = 0d;
