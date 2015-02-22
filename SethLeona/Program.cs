@@ -80,7 +80,7 @@ namespace Leona
             _root.SubMenu("Misc").AddItem(new MenuItem("QUsage", "Auto-Q on GapClosers").SetValue(true));
 
             _root.AddToMainMenu();
-            Game.PrintChat("<font color='#0066FF'>Seth </font>: Leona [ Loaded ~ ]");
+            Game.PrintChat("<font color='#0066FF'>Seth </font>: Leona [ Loaded ]");
 
             Game.OnGameUpdate += Game_OnGameUpdate;
             Drawing.OnDraw += Drawing_OnDraw;
@@ -203,8 +203,7 @@ namespace Leona
                         {
                             if (ObjectManager.Player.Distance(target) < _r.Range)
                             {
-                                _r.Cast(target.Position);
-                                // _r.CastIfHitchanceEquals(Target, HitChance.Immobile);
+                                _r.CastIfHitchanceEquals(target, HitChance.Immobile);
                             }
                         }
                     }
