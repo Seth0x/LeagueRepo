@@ -43,7 +43,7 @@ namespace SethLulu
             _spells.Add(_e);
             _spells.Add(_r);
 
-            _root = new Menu("SethLulu", "Lulu");
+            _root = new Menu("SethLulu", "Lulu", true);
             _root.AddSubMenu(new Menu("Orbwalking", "Orbwalking"));
 
             Orbwalker = new Orbwalking.Orbwalker(_root.SubMenu("Orbwalking"));
