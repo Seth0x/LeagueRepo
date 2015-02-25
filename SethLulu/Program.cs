@@ -87,7 +87,7 @@ namespace SethLulu
 
             _root.AddSubMenu(new Menu("Defensive Spells", "AllyM"));
             _root.SubMenu("AllyM").AddItem(new MenuItem("DefActive", "Enable Defensive Spells").SetValue(true));
-            if (_root.Item("DefActive").GetValue<bool>())
+            if (_root.Item("DefActive").GetValue<bool>() == true)
             {
                 _root.SubMenu("AllyM").AddItem(new MenuItem("ESpell", "Spell E"));
                 _root.SubMenu("ESpell").AddItem(new MenuItem("AutoE", "% HP to use E").SetValue(new Slider(50, 100, 0)));
