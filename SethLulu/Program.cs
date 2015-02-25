@@ -27,7 +27,7 @@ namespace SethLulu
         }
         private static void Game_OnGameLoad(EventArgs args)
         {
-            if (ObjectManager.Player.BaseSkinName == ChampionName) return;
+            if (ObjectManager.Player.BaseSkinName != ChampionName) return;
 
             _q = new Spell(SpellSlot.Q, 925f);
             _q.SetSkillshot(0.25f, 60, 1450, false, SkillshotType.SkillshotLine);
