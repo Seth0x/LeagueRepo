@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4DD24AD-9603-4489-8858-397CF5A0929E}</ProjectGuid>
+    <ProjectGuid>{109B529A-C140-4403-B7F9-BE6649375C99}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SethLulu</RootNamespace>
-    <AssemblyName>SethLulu</AssemblyName>
+    <RootNamespace>Pantheon</RootNamespace>
+    <AssemblyName>Pantheon</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
