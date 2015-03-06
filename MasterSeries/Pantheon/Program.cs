@@ -428,6 +428,15 @@ namespace Pantheon
                 }            
             }
 
+            // auto - q
+            if (t.IsValidTarget(Spear.Range) && Spear.IsReady())
+            {
+                if (ObjectManager.Player.Mana >= 300)
+                {
+                    Spear.CastOnUnit(t);
+                }
+            }
+
             indexq = Menu.Item("QFarm").GetValue<StringList>().SelectedIndex;
             if (Orbwalker.ActiveMode.ToString() == "LastHit")
             {
