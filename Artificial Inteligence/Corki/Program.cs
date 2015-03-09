@@ -155,14 +155,14 @@ namespace Corki
                 if (minions.Count > 1 && Q.IsReady())
                 {
                     var minion = minions[0];
-                    if (minion.IsValidTarget(Q.Range))
+                    if (minion.IsValidTarget(Q.Range) && ObjectManager.Player.Mana > 600)
                         Q.Cast(minion, false); 
                 }
-                else if (minions.Count > 0 && E.IsReady())
+                else if (minions.Count > 0 && E.IsReady() && ObjectManager.Player.Mana > 300)
                 {
                     var minion = minions[0];
                     if (target.IsValidTarget(E.Range))
-                        E.Cast();
+                        E.Cast(minion, true);
                 }
                 else if (minions.Count > 2 && R1.IsReady() && ObjectManager.Player.Mana >= ManaControl)
                 {
@@ -171,7 +171,7 @@ namespace Corki
                         R1.CastIfHitchanceEquals(minion, HitChance.Medium, false);
                 }
 
-                if (target.IsValidTarget(Q.Range) && Q.IsReady())
+                if (target.IsValidTarget(Q.Range) && Q.IsReady() && ObjectManager.Player.Mana > 300)
                     Q.Cast(target);
                 else if(target.IsValidTarget(R1.Range) && R1.IsReady() && ObjectManager.Player.Mana >= ManaControl)
                 {
